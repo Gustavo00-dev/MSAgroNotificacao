@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: agronotificacao
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: agronotificacao
+
+  template:
+    metadata:
+      labels:
+        app: agronotificacao
+
+    spec:
+      containers:
+        - name: agronotificacao
+          image: euturial/agronotificacao:latest
+
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 8080
