@@ -5,12 +5,12 @@ metadata:
   name: agronotificacao-service
 
 spec:
-  type: NodePort
+  type: ClusterIP
 
   selector:
     app: agronotificacao
 
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
       targetPort: 8080
-      nodePort: 30007
