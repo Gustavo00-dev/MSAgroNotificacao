@@ -62,7 +62,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /
+          - path: /notificacao
             pathType: Prefix
             backend:
               service:
