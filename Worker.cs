@@ -22,7 +22,7 @@ namespace MSAgroNotificacao
                     using var scope = _scopeFactory.CreateScope();
                     var db = scope.ServiceProvider.GetRequiredService<MSAgroNotificacao.Data.AgroDbContext>();
 
-                    var since = DateTime.UtcNow.AddHours(-1000);
+                    var since = DateTime.UtcNow.AddHours(-24);
 
                     var talhoes = await db.Sensors
                         .Where(s => s.DataUltimaAtualizacao >= since)

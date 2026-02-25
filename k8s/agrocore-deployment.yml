@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: agronotificacao
-          image: euturial/agronotificacao:latest
+          image: euturial/msagronotificacao:latest
           imagePullPolicy: Always
 
           ports:
