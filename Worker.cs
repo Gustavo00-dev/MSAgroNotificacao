@@ -29,7 +29,7 @@ namespace MSAgroNotificacao
                         .Select(s => s.IdTalhao)
                         .Distinct()
                         .ToListAsync(stoppingToken);
-                    _logger.LogInformation("Processando {count} talhões com leituras recentes", talhoes.Count);
+                    _logger.LogInformation("Processando {count} talhões com leituras recentes, data corte de leitura {data}", talhoes.Count, since);
                     foreach (var idTalhao in talhoes)
                     {
                         var leituras = await db.Sensors
